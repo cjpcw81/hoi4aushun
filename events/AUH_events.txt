@@ -1,0 +1,17 @@
+add_namespace = AUH_event
+
+
+country_event = {
+    id = AUH_event.1
+    title = AUH_event.1.t
+    desc = AUH_event.1.desc
+	
+    is_triggered_only = yes
+
+
+    option = {
+        name = AUH_event.1.a
+        custom_effect_tooltip = failed_1936
+	set_country_flag = failed_1936
+    }
+}

@@ -1,0 +1,44 @@
+characters = {
+ 	AUH_karl1 = {
+		name = AUH_karl1
+		portraits = {
+			civilian = {
+				large = GFX_karl1
+			}
+		}	
+		country_leader = {
+			ideology = conservatism
+			traits={  }
+			expire="1965.1.1"
+		}
+		country_leader = {
+			ideology = despotism
+			traits={  }
+			expire="1965.1.1"
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits={  }
+			expire="1965.1.1"
+		}
+	}
+	AUH_karl_eglseer={
+		name=AUH_karl_eglseer
+		portraits={
+			army={
+				large=GFX_portrait_AUS_karl_eglseer
+				small=GFX_portrait_AUS_karl_eglseer_small
+			}
+		}
+		corps_commander={
+			traits={ trickster trait_mountaineer }
+			skill=3
+			attack_skill=2
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=2
+			legacy_id=-1
+		}
+	}
+
+}
