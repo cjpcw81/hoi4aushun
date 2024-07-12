@@ -15,3 +15,40 @@ country_event = {
 	set_country_flag = failed_1936
     }
 }
+country_event = {
+    id = AUH_event.2
+    title = AUH_event.2.t
+    desc = AUH_event.2.desc
+	
+    is_triggered_only = yes
+
+
+    option = {
+        name = AUH_event.2.a
+        HUN = {
+			country_event = { hours = 0 id = AUH_event.3 }
+		}
+    }
+}
+country_event = {
+    id = AUH_event.3
+    title = AUH_event.3.t
+    desc = AUH_event.3.desc
+	
+    is_triggered_only = yes
+
+
+    option = {
+        name = AUH_event.3.a
+    AUH = {
+        ai_chance = { factor = 5 }
+        set_country_flag = hun_allowd
+        }
+    }
+     option = {
+        name = AUH_event.3.b
+    AUH = {
+        set_country_flag = hun_refuse
+        }
+    }
+}

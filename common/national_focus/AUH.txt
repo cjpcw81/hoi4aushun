@@ -14,7 +14,7 @@ focus_tree = {
 	focus = {
 		id = AUH_goto1936 #제국회의
 		icon = GFX_focus_ger_revive_kaiserreich
-		x = 6
+		x = 11.5
 		y = 0
 		cost = 0.21
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -30,9 +30,197 @@ focus_tree = {
 		
 	}
 	focus = {
+		id = AUH_bigausunion #대오스트리아 합중국
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 20
+		y = 2
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { focus = AUH_goto1936 }
+		mutually_exclusive = { focus = AUH_Ausgleich }
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+
+		}
+	}
+	focus = {
+		id = AUH_hoso #제국내 호소
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 20
+		y = 4
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { focus = AUH_bigausunion }
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			country_event = { id = AUH_event.2 hours = 0 }
+		}
+		
+	}
+	focus = {
+		id = AUH_fuckyouhun #헝가리 무력진압
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 18
+		y = 5
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { focus = AUH_hoso }
+		mutually_exclusive = { focus = AUH_giveyouhun }
+		available = {
+			has_country_flag = hun_refuse
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			end_puppet = HUN
+			declare_war_on = {
+				target = HUN
+				type = annex_everything
+		}
+		}
+		
+	}
+	focus = {
+		id = AUH_giveyouhun #헝가리 합병
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 22
+		y = 5
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { focus = AUH_hoso }
+		mutually_exclusive = { focus = AUH_fuckyouhun }
+		ai_will_do = {
+			factor = 0
+		}
+		available = {
+			has_country_flag = hun_allowd
+		}
+		completion_reward = {
+			annex_country = { target = HUN }
+		}
+		
+	}
+	focus = {
+		id = AUH_trihun #헝가리인 다루기
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 20
+		y = 7
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { focus = AUH_giveyouhun focus =  AUH_fuckyouhun }
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			add_state_core = 155
+			add_state_core = 43
+			add_state_core = 154
+			add_state_core = 76
+			add_state_core = 664
+		}
+		
+	}
+	focus = {
+		id = AUH_trislo #슬로바키아, 우크라이나인들과의 통합
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 22
+		y = 7
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { focus = AUH_giveyouhun focus =  AUH_fuckyouhun }
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			add_state_core = 70
+			add_state_core = 71
+			add_state_core = 73
+		}
+		
+	}
+	focus = {
+		id = AUH_trirom #루마니아인 통합
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 18
+		y = 7
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { focus = AUH_giveyouhun focus =  AUH_fuckyouhun }
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			add_state_core = 84
+			add_state_core = 83
+			add_state_core = 82
+		}
+		
+	}
+	focus = {
+		id = AUH_trisla #슬라브인 통합
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 20
+		y = 9
+		cost = 10
+		prerequisite = { focus = AUH_trihun }
+		prerequisite = { focus = AUH_trislo }
+		prerequisite = { focus = AUH_trirom }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			annex_country = { target = CRO }
+			add_state_core = 764
+			add_state_core = 45
+			add_state_core = 109
+			add_state_core = 104
+			add_state_core = 804
+			add_state_core = 103
+			add_state_core = 163
+		}
+	}
+	focus = {
+		id = AUH_triall #대오스트리아 합중국 선언
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 20
+		y = 11
+		cost = 10
+		prerequisite = { focus = AUH_trisla }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			set_cosmetic_tag = GREATAUS
+		}
+	}
+	focus = {
+		id = AUH_Ausgleich #대타협 지속
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 3
+		y = 2
+		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		prerequisite = { focus = AUH_goto1936 }
+		mutually_exclusive = { focus = AUH_bigausunion }
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+
+		}
+		
+	}
+	focus = {
 		id = AUH_sanup_1
 		icon = GFX_goal_generic_construct_civ_factory
-		x = 15
+		x = 39
 		y = 0
 		cost = 5
 		search_filters = { FOCUS_FILTER_INDUSTRY} 
@@ -64,7 +252,7 @@ focus_tree = {
 		focus = {
 		id = AUH_sanup_2
 		icon = GFX_goal_generic_construct_infrastructure
-		x = 17
+		x = 41
 		y = 0
 		cost = 10
 		search_filters = { FOCUS_FILTER_INDUSTRY} 
