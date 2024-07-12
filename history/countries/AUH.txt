@@ -172,6 +172,15 @@ set_autonomy = {
 		autonomous_state = autonomy_AUH
 		freedom_level = 0.4
 }
+set_autonomy = {
+		target = CZE
+		autonomous_state = autonomy_AUH
+		freedom_level = 0.4
+}
+create_faction = austria_hungary
+add_to_faction = HUN
+add_to_faction = CZE
+add_to_faction = CRO
 #Politics for 1939.1.1
 1939.1.1 = {
 	set_popularities = {
