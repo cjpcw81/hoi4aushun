@@ -15,7 +15,7 @@ focus_tree = {
 		id = AUH_goto1936 #제국회의
 		icon = GFX_focus_ger_revive_kaiserreich
 		x = 11.5
-		y = 0
+		y = 13
 		cost = 0.21
 		search_filters = { FOCUS_FILTER_POLITICAL } 
 		ai_will_do = {
@@ -27,7 +27,23 @@ focus_tree = {
 				country_event = { id = AUH_event.1 hours = 0 }
 			}
 		}
-		
+	}
+	focus = {
+		id = AUH_complete
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 11.5
+		y = 0
+		cost = 0.21
+		available = {
+			has_country_flag = hunal
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+			
+		}
 	}
 	focus = {
 		id = AUH_bigausunion #대오스트리아 합중국
@@ -36,7 +52,7 @@ focus_tree = {
 		y = 2
 		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL } 
-		prerequisite = { focus = AUH_goto1936 }
+		prerequisite = { focus = AUH_complete }
 		mutually_exclusive = { focus = AUH_Ausgleich }
 		ai_will_do = {
 			factor = 0
@@ -234,7 +250,7 @@ focus_tree = {
 		y = 2
 		cost = 5
 		search_filters = { FOCUS_FILTER_POLITICAL } 
-		prerequisite = { focus = AUH_goto1936 }
+		prerequisite = { focus = AUH_complete }
 		mutually_exclusive = { focus = AUH_bigausunion }
 		ai_will_do = {
 			factor = 0
