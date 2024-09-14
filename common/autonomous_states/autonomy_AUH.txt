@@ -39,7 +39,10 @@ autonomy_state = {
 	ai_overlord_wants_lower = {
 		factor = 0.0
 	}
-	
+	allowed = {
+		has_dlc = "Waking the Tiger"
+		OVERLORD = { original_tag = AUH }
+			}
 	allowed_levels_filter = {
 		autonomy_AUH
 	}

@@ -159,31 +159,31 @@ focus_tree = {
 			add_state_core = 70
 			add_state_core = 71
 			add_state_core = 73
-			add_state_core = 88
-			add_state_core = 89
-			add_state_core = 91
+			#add_state_core = 88
+			#add_state_core = 89
+			#add_state_core = 91
 		}
 		
 	}
-	focus = {
-		id = AUH_trirom #루마니아인 통합
-		icon = GFX_focus_ger_revive_kaiserreich
-		x = 18
-		y = 7
-		cost = 5
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-		prerequisite = { focus = AUH_giveyouhun focus =  AUH_fuckyouhun }
-		ai_will_do = {
-			factor = 0
-		}
-		completion_reward = {
-			add_state_core = 84
-			add_state_core = 83
-			add_state_core = 82
-			add_state_core = 80
-		}
+	#focus = {
+		#id = AUH_trirom #루마니아인 통합
+		#icon = GFX_focus_ger_revive_kaiserreich
+		#x = 18
+		#y = 7
+		#cost = 5
+		#search_filters = { FOCUS_FILTER_POLITICAL } 
+		#prerequisite = { focus = AUH_giveyouhun focus =  AUH_fuckyouhun }
+		#ai_will_do = {
+			#factor = 0
+		#}
+		#completion_reward = {
+			#add_state_core = 84
+			#add_state_core = 83
+			#add_state_core = 82
+			#add_state_core = 80
+		#}
 		
-	}
+	#}
 	focus = {
 		id = AUH_trisla #슬라브인 통합
 		icon = GFX_focus_ger_revive_kaiserreich
@@ -232,7 +232,7 @@ focus_tree = {
 		cost = 10
 		prerequisite = { focus = AUH_trisla }
 		prerequisite = { focus = AUH_tricze }
-		prerequisite = { focus = AUH_trirom }
+		#prerequisite = { focus = AUH_trirom }
 		prerequisite = { focus = AUH_trislo }
 		prerequisite = { focus = AUH_trihun }
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -352,4 +352,21 @@ focus_tree = {
 			}		
 		}
 		}
+	focus = {
+		id = AUH_sanup_3
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 40
+		y = 1
+		cost = 5
+		prerequisite = { focus = AUH_sanup_1 }
+		prerequisite = {focus = AUH_sanup_2}
+		search_filters = { FOCUS_FILTER_INDUSTRY} 
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+
+		}
+		
+	}
 }
