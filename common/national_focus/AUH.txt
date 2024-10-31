@@ -9,6 +9,7 @@ focus_tree = {
 			tag = AUH
 		}
 	}
+	shared_focus = HUN_parliament
 	
 	default = no
 	focus = {
@@ -141,6 +142,9 @@ focus_tree = {
 			add_state_core = 154
 			add_state_core = 76
 			add_state_core = 664
+			add_state_core = 84
+			add_state_core = 83
+			add_state_core = 82
 		}
 		
 	}

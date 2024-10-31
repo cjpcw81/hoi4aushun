@@ -21,6 +21,7 @@ state = {
 		}
 		add_core_of = AUH
 		add_core_of = LBV
+		add_core_of = ITA
 	}
 
 	provinces = {
